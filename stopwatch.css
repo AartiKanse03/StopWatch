@@ -1,0 +1,100 @@
+html, body {
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+    background-image: url('./img1.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text alignment */
+}
+
+img {
+    max-width: 100%; /* Ensure images scale down within their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below images */
+}
+
+.container {
+    padding: 0 1rem; /* Add some padding for smaller screens */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.timer {
+    color: black;
+    font-size: 4rem; /* Adjusted for better responsiveness */
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.stopwatch {
+    color: lightseagreen;
+    font-weight: bold;
+    font-size: 2.5rem; /* Adjusted for better responsiveness */
+    margin-top: 2rem;
+}
+
+.buttons {
+    display: flex; /* Use Flexbox for button alignment */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 1rem; /* Add space between buttons */
+    margin: 0;
+}
+
+.buttons button {
+    font-size: 1rem; /* Adjusted for better responsiveness */
+    padding: 0.5rem 1rem; /* Adjusted padding for buttons */
+    border-radius: 0.5rem; /* Rounded corners */
+}
+
+@media (max-width: 768px) {
+    .timer {
+        font-size: 3.5rem; /* Slightly smaller font size for medium screens */
+    }
+    
+    .stopwatch {
+        font-size: 2.25rem; /* Slightly smaller font size for medium screens */
+    }
+    
+    .buttons button {
+        font-size: 0.9rem; /* Slightly smaller button text size */
+        padding: 0.4rem 0.8rem; /* Smaller padding for buttons */
+    }
+}
+
+@media (max-width: 576px) {
+    .timer {
+        font-size: 3rem; /* Smaller font size for smaller screens */
+    }
+    
+    .stopwatch {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+    
+    .buttons button {
+        font-size: 0.875rem; /* Smaller button text size */
+        padding: 0.4rem 0.8rem; /* Smaller padding for buttons */
+    }
+}
+
+@media (max-width: 400px) {
+    .timer {
+        font-size: 2.5rem; /* Even smaller font size for very small screens */
+    }
+    
+    .stopwatch {
+        font-size: 1.75rem; /* Even smaller font size for very small screens */
+    }
+    
+    .buttons button {
+        font-size: 0.75rem; /* Even smaller button text size */
+        padding: 0.3rem 0.6rem; /* Even smaller padding for buttons */
+    }
+}
